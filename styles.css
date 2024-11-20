@@ -1,0 +1,344 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000; /* Dark background for the starry space theme */
+    color: #fff;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fdd835;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.25rem;
+    color: #b0b0b0;
+    margin-top: 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar .logo h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fdd835;
+    margin: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1d1d1d 30%, #5a5a5a);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s, transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.navbar a:hover {
+    color: #fdd835; /* Hover color */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    background: linear-gradient(135deg, #fdd835, #ff9800);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Styles */
+section {
+    padding: 80px 20px;
+    margin-top: 70px; /* Adjust for fixed navbar */
+    text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #777;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Buttons */
+button {
+    background-color: #ffd700;
+    color: #000;
+    font-size: 1rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00bfff;
+    transform: scale(1.05);
+}
+
+/* Games Section */
+.games .game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game-item {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+}
+
+.game-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.game-item p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.game-item a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #ffd700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.game-item a:hover {
+    background-color: #00bfff;
+    transform: scale(1.05);
+}
+
+/* Terms of Service and Privacy Policy Sections */
+.terms, .privacy-policy {
+    padding: 40px;
+    text-align: left;
+    background-color: #111;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.terms h2, .privacy-policy h2 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.terms ul, .privacy-policy ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.terms li, .privacy-policy li {
+    margin-bottom: 15px;
+}
+
+/* Scroll Animation for Background Stars */
+@keyframes star-animation {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+.star-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    animation: star-animation 60s linear infinite;
+}
+
+/* Container and Section Adjustments */
+.container {
+    margin-top: 150px; /* Space for the sticky navbar */
+}
+
+h2, p {
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 40px;
+    margin-top: 100px;
+    background-color: #111;
+    border-radius: 15px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .game-item {
+        width: 200px;
+    }
+
+    .game-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .game-item p {
+        font-size: 0.9rem;
+    }
+
+    .terms h2, .privacy-policy h2 {
+        font-size: 2rem;
+    }
+
+    .terms ul, .privacy-policy ul {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-list {
+        flex-direction: column;
+    }
+
+    .game-item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .navbar .logo h2 {
+        font-size: 1.6rem;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .game-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .game-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .navbar .logo h2 {
+        font-size: 1.4rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .game-item {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .game-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .game-item p {
+        font-size: 0.85rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
